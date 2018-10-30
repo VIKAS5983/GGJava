@@ -1,0 +1,61 @@
+!SESSION 2018-10-30 20:12:13.026 -----------------------------------------------
+eclipse.buildId=M20120914-1800
+java.version=1.7.0_09
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY com.perforce.team.core 2 0 2018-10-30 20:13:09.381
+!MESSAGE unable to get manifest version attribute: Not running from jar file: bundleresource://818.fwk936146014:1/com/perforce/p4java/Metadata.class
+
+!ENTRY com.perforce.team.core 2 0 2018-10-30 20:13:09.385
+!MESSAGE unable to get manifest date attribute: Not running from jar file: bundleresource://818.fwk936146014:1/com/perforce/p4java/Metadata.class
+
+!ENTRY com.perforce.team.core 1 0 2018-10-30 20:13:09.385
+!MESSAGE P4Java server factory loaded; version: Internal 2010.1 Perforce Development; date: unknown
+
+!ENTRY com.perforce.team.core 1 0 2018-10-30 20:13:09.386
+!MESSAGE Using default charset: windows-1252; JVM charset: windows-1252
+
+!ENTRY com.perforce.team.core 1 0 2018-10-30 20:13:09.388
+!MESSAGE Checking this Java for symbolic link support...
+
+!ENTRY com.perforce.team.core 1 0 2018-10-30 20:13:09.390
+!MESSAGE It seems this Java supports symbolic links.
+
+!ENTRY com.perforce.team.core 1 0 2018-10-30 20:13:09.391
+!MESSAGE Symbolic link support at the OS level will be determined at runtime...
+
+!ENTRY com.perforce.team.core 1 0 2018-10-30 20:13:09.391
+!MESSAGE initializing system file command helper class: java.io.File
+
+!ENTRY com.perforce.team.core 1 0 2018-10-30 20:13:09.392
+!MESSAGE Using default RPC system file command helper: com.perforce.p4java.impl.mapbased.rpc.sys.helper.RpcSystemFileCommandsHelper
+
+!ENTRY com.perforce.team.core 1 0 2018-10-30 20:13:09.392
+!MESSAGE setting RPC system file helper to class com.perforce.team.core.p4java.P4JavaSysFileCommandsHelper
+
+!ENTRY org.eclipse.ui 4 4 2018-10-30 20:13:50.532
+!MESSAGE Referenced part does not exist yet: org.eclipse.ui.views.ProblemsView.
+
+!ENTRY org.eclipse.ui 4 4 2018-10-30 20:13:50.535
+!MESSAGE Referenced part does not exist yet: org.eclipse.ui.views.TaskList.
+
+!ENTRY com.emc.ngis.eclipse 4 0 2018-10-30 20:13:52.517
+!MESSAGE 400: Could not connect to http://localhost:8181/.
+Did you start an Information Server?
+!STACK 0
+com.emc.ngis.eclipse.external.MissingInformationServerException: 400: Could not connect to http://localhost:8181/.
+Did you start an Information Server?
+	at com.emc.ngis.eclipse.external.InformationServer.checkAvailable(InformationServer.java:98)
+	at com.emc.ngis.eclipse.external.Authenticator.requestTicket(Authenticator.java:73)
+	at com.emc.ngis.eclipse.external.Authenticator.waitForTicket(Authenticator.java:53)
+	at com.emc.ngis.eclipse.external.TicketJob.run(TicketJob.java:18)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY com.google.gdt.eclipse.suite 1 0 2018-10-30 20:22:22.045
+!MESSAGE Registering: com.google.appengine.eclipse.sdkbundle_1.7.3
+
+!ENTRY com.google.gdt.eclipse.suite 1 0 2018-10-30 20:22:22.173
+!MESSAGE Registering: com.google.gwt.eclipse.sdkbundle_2.5.0.v201211121240-rel-r42

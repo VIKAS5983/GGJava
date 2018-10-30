@@ -1,0 +1,38 @@
+package gg.single;
+
+import gg.single.LinkedList.Node;
+
+public class LinkedListInsertion {
+
+	static class Node{
+		int data;
+ 		Node next;
+ 		Node(int d){
+ 			data=d;
+ 			next=null;
+ 		}
+	}
+
+	public static void main(String args[]){
+		
+	}
+	
+	public Node insertHead(){
+		
+		return null;
+	}
+	
+	public void  insertEnd(){
+		
+	}
+	
+	public Node insertInAscendingOrder(){
+		
+		return null;
+	}
+	
+	public Node insertAtIndex(){
+		
+		return null;
+	}
+}

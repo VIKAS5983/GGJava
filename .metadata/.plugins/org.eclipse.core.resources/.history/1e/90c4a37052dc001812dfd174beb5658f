@@ -1,0 +1,6 @@
+package gg.single;
+
+public class LinkedList {
+ int data;
+ LinkedList next;
+}
