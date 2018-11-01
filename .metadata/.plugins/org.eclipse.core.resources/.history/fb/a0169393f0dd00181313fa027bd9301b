@@ -1,0 +1,44 @@
+package gg.circular;
+
+import gg.single.Node;
+
+public class circularLinkedListSplitHalf {
+	
+	public static void main(String args[]){
+		Node head=null;
+		
+		head=circularLinkedListInsertion.insertdata(head, 1);
+		head=circularLinkedListInsertion.insertdata(head, 2);
+		head=circularLinkedListInsertion.insertdata(head, 3);
+		head=circularLinkedListInsertion.insertdata(head, 4);
+		head=circularLinkedListInsertion.insertdata(head, 6);
+		head=circularLinkedListInsertion.insertdata(head, 8);
+		head=circularLinkedListInsertion.insertdata(head, 10);
+		head=circularLinkedListInsertion.insertdata(head, 42);
+		
+		
+		circularLinkedListInsertion.printData(head);
+		splitCircularLinkedList(head);
+	}
+	
+	public static void splitCircularLinkedList(Node head){
+		
+		Node slow=head;
+		Node fast=head;
+		
+		do{
+			slow=slow.next;
+			fast=fast.next.next;
+		}while(fast.next!=head || fast.next.next!=head);
+		
+		Node h1=slow.next;
+		Node h2=head;
+
+		if(fast.next==head)
+			fast.next=null;
+		else 
+			fast.next.next=null;
+	}
+	
+
+}

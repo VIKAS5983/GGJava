@@ -1,0 +1,28 @@
+package gg.circular;
+
+import gg.single.Node;
+
+public class circularLinkedListInsertion {
+
+	public static void main(String args[]){
+		
+	}
+	
+	
+	public static Node insertdata(Node head,int d){
+		Node n=new Node(d);
+
+		if(head==null){
+			n.next=n;
+			return n;
+		}
+		return n;
+	}
+	
+	public static void printData(Node head){
+		
+		while(){
+			
+		}
+	}
+}

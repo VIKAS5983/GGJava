@@ -1,0 +1,16 @@
+package gg.circular;
+
+import gg.single.Node;
+
+public class circularLinkedListInsertion {
+
+	public static void main(String args[]){
+		
+	}
+	
+	
+	public static Node insertdata(int d){
+		
+		Node n=new Node(d);
+	}
+}
