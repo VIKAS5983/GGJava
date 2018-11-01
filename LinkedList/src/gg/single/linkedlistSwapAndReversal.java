@@ -1,16 +1,9 @@
 package gg.single;
 
-import gg.single.LinkedListLength.Node;
 
 public class linkedlistSwapAndReversal {
-	static class Node{
-		int data;
- 		Node next;
- 		Node(int d){
- 			data=d;
- 			next=null;
- 		}
-	}
+
+
 	public static void main(String args[]){
 		Node head=new Node(1);
 		head=insertEnd(head,2);
@@ -25,7 +18,7 @@ public class linkedlistSwapAndReversal {
 	}
 	
 	
-	private static Node reverseLinkedList(Node head) {
+	public  static Node reverseLinkedList(Node head) {
 		
 		if(head==null){
 			return null;

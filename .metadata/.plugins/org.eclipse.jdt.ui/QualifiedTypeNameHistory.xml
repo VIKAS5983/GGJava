@@ -4,4 +4,5 @@
 <fullyQualifiedTypeName name="gg.single.LinkedList.Node"/>
 <fullyQualifiedTypeName name="gg.single.LinkedListInsertion.Node"/>
 <fullyQualifiedTypeName name="gg.single.LinkedListInsertion"/>
+<fullyQualifiedTypeName name="gg.single.LinkedListLength.Node"/>
 </qualifiedTypeNameHistroy>

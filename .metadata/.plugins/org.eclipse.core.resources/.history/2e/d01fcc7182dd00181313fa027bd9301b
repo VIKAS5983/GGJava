@@ -1,0 +1,36 @@
+package gg.single;
+
+public class LinkedListReverseInGroups {
+	public static void main(String args[]){
+		Node head=new Node(1);
+		head=LinkedListInsertion.insertEnd(head,3);
+		head=insertEnd(head,5);
+		head=insertEnd(head,9);
+		head=insertEnd(head,12);
+
+		Node head1=new Node(2);
+		head1=insertEnd(head1, 6);
+		head1=insertEnd(head1,7);
+		head1=insertEnd(head1,10);
+		head1=insertEnd(head1,15);
+		
+		//printAllNodes(head);
+		//printAllNodes(head1);
+		Node newHead=mergeSortedLinkedLists(head,head1);
+		
+		Node head12=new Node(1);
+		head12=insertEnd(head12,12);
+		head12=insertEnd(head12,2);
+		head12=insertEnd(head12,8);
+		head12=insertEnd(head12,122);
+		head12=insertEnd(head12,52);
+		head12=insertEnd(head12,6);
+		
+		printAllNodes(head12);
+		sortLinkedLists(head12);
+		printAllNodes(head12);
+
+	}
+	
+
+}

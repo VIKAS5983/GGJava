@@ -1,0 +1,62 @@
+package gg.single;
+
+import javax.swing.text.DefaultEditorKit.CutAction;
+
+public class LinkedListReverseInGroups {
+	public static void main(String args[]){
+		Node head=new Node(1);
+		for(int i=2;i<30;i++)
+			head=LinkedListInsertion.insertEnd(head,i);
+
+		
+		/*
+		head=LinkedListInsertion.insertEnd(head,9);
+		head=LinkedListInsertion.insertEnd(head,12);
+		head=LinkedListInsertion.insertEnd(head, 6);
+		head=LinkedListInsertion.insertEnd(head,7);
+		head=LinkedListInsertion.insertEnd(head,10);
+		head=LinkedListInsertion.insertEnd(head,15);
+		head=LinkedListInsertion.insertEnd(head,12);
+		head=LinkedListInsertion.insertEnd(head,2);
+		head=LinkedListInsertion.insertEnd(head,8);
+		head=LinkedListInsertion.insertEnd(head,122);
+		head=LinkedListInsertion.insertEnd(head,52);
+		head=LinkedListInsertion.insertEnd(head,6);
+	*/
+		
+		LinkedListInsertion.printAllNodes(head);
+	}
+	
+    Node reverse(Node head, int k) 
+    { 
+       Node current = head; 
+       Node next = null; 
+       Node prev = null; 
+         
+       int count = 0; 
+  
+       /* Reverse first k nodes of linked list */
+       while (count < k && current != null)  
+       { 
+           next = current.next; 
+           current.next = prev; 
+           prev = current; 
+           current = next; 
+           count++; 
+       } 
+  
+       /* next is now a pointer to (k+1)th node  
+          Recursively call for the list starting from current. 
+          And make rest of the list as next of first node */
+       if (next != null)  
+          head.next = reverse(next, k); 
+  
+       // prev is now head of input list 
+       return prev; 
+    }                       
+
+	
+	
+	
+
+}

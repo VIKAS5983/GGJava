@@ -1,16 +1,8 @@
 package gg.single;
 
-import gg.single.linkedlistSwapAndReversal.Node;
-
 public class LinkedListSortedMerge {
-	static class Node{
-		int data;
- 		Node next;
- 		Node(int d){
- 			data=d;
- 			next=null;
- 		}
-	}
+	
+
 	public static void main(String args[]){
 		Node head=new Node(1);
 		head=insertEnd(head,3);
@@ -24,12 +16,50 @@ public class LinkedListSortedMerge {
 		head1=insertEnd(head1,10);
 		head1=insertEnd(head1,15);
 		
-		printAllNodes(head);
-		printAllNodes(head1);
+		//printAllNodes(head);
+		//printAllNodes(head1);
 		Node newHead=mergeSortedLinkedLists(head,head1);
 		
-		printAllNodes(newHead);
+		Node head12=new Node(1);
+		head12=insertEnd(head12,12);
+		head12=insertEnd(head12,2);
+		head12=insertEnd(head12,8);
+		head12=insertEnd(head12,122);
+		head12=insertEnd(head12,52);
+		head12=insertEnd(head12,6);
+		
+		printAllNodes(head12);
+		sortLinkedLists(head12);
+		printAllNodes(head12);
+
 	}
+	
+	
+	private static Node sortLinkedLists(Node head){
+		Node n1=head;
+		Node n2=head;
+		if(n1.next==null){
+			return n1;
+		}
+		Node prev=null;
+		while(n1!=null && n2!=null&& n2.next!=null){
+			prev=n1;
+			n1=n1.next;
+			n2=n2.next.next;
+		}
+		
+		Node head2=prev.next;
+		prev.next=null;
+
+		head=sortLinkedLists(head);
+		head2=sortLinkedLists(head2);
+		
+		Node newHead=mergeSortedLinkedLists(head, head2);
+		
+		return newHead;
+	}
+	
+	
 	
 	private static Node mergeSortedLinkedLists(Node head, Node head1) {
 		Node newHead=null;
@@ -46,7 +76,6 @@ public class LinkedListSortedMerge {
 						temp=temp.next;
 
 					}
-					System.out.println(head1.data);
 					head1=head1.next;
 				}else{
 					if(!value){
@@ -58,7 +87,6 @@ public class LinkedListSortedMerge {
 						temp=temp.next;
 
 					}
-					System.out.println(head.data);
 					head=head.next;
 				}
 			}

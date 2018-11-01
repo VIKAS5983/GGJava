@@ -3,14 +3,6 @@ package gg.single;
 
 public class LinkedListInsertion {
 
-	static class Node{
-		int data;
- 		Node next;
- 		Node(int d){
- 			data=d;
- 			next=null;
- 		}
-	}
 
 	public static void main(String args[]){
 		Node head=new Node(1);
@@ -128,10 +120,12 @@ public class LinkedListInsertion {
 			return ;
 		
 		Node tr=head;
+		System.out.print("Data ");
 			while(tr!=null){
-				System.out.println("Data "+ tr.data);
+				System.out.print(" "+ tr.data);
 				tr=tr.next;
 			}
+		System.out.println();
 
 	}
 
