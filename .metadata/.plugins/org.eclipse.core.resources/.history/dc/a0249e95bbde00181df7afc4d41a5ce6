@@ -1,0 +1,8 @@
+package gg.doubly;
+
+public class doubleLinkedListInsertion {
+	public static void main(String args[]){
+		
+		
+	}
+}

@@ -22,6 +22,7 @@ public class circularLinkedListSplitHalf {
 	//	splitCircularLinkedList(head);
 	}
 	
+	// Insert the data in sorted manner	
 	public static Node insertdata(Node head,int d){
 		Node n=new Node(d);
 		Node temp=head;
