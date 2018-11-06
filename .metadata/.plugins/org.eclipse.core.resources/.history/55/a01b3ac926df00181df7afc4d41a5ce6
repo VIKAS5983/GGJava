@@ -1,0 +1,25 @@
+package gg.circular;
+
+import gg.single.Node;
+
+public class circulationLinkedListConvertion {
+
+	public static void main(String args[]){
+		
+		
+		Node head=null;
+		circularLinkedListInsertion.printData(head);
+
+	}
+	
+	public class Node{
+		public int data;
+		public Node next;
+		public Node(int d){
+			data=d;
+			next=null;
+		}
+	}
+
+	
+}

@@ -1,0 +1,15 @@
+package gg.binaryTree;
+
+public class TreeNodeTraversel {
+
+	public static void inorderTraversol(TreeNode head){
+		
+	}
+	public static void preorderTraversol(TreeNode head){
+		
+	}
+	public static void postorderTraversol(TreeNode head){
+		
+	}
+
+}

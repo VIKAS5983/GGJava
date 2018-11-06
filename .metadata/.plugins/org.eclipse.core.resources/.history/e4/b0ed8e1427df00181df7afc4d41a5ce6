@@ -1,0 +1,11 @@
+package gg.binaryTree;
+
+public class TreeNodeInsertion {
+	
+	public void insertNode(TreeNode head,int data){
+		
+		if(head.data<data){
+			head.right=insertNode(head.right, data);
+		}
+	}
+}

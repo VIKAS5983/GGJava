@@ -1,0 +1,59 @@
+package gg.sort;
+
+public class HeapSort {
+	public static void main(String args[]){
+		
+		int arr[]={12,11,21,23,1};
+		heapSort(arr);
+
+		ArrayUtils.printArray(arr);
+	}
+	public static void heapSort(int arr[]){
+		
+		for(int i=0;i<arr.length;i++){
+			heapify(arr, i, arr.length-i);			
+		}
+		ArrayUtils.printArray(arr);
+
+	        for (int i=arr.length-1; i>=0; i--) 
+	        { 
+	            // Move current root to end 
+	            int temp = arr[0]; 
+	            arr[0] = arr[i]; 
+	            arr[i] = temp; 
+	  
+	            // call max heapify on the reduced heap 
+	            heapify(arr, i, 0); 
+	        } 
+
+	}
+	
+	public static void heapify(int arr[], int currN, int length){
+		
+		if(currN>=length){
+			return;
+		}
+
+		int leftChild=2*currN+1;
+		int rightChild=2*currN+2;
+		int maxIndex;
+		
+		if(leftChild < length && rightChild < length){
+		 maxIndex=arr[leftChild]>arr[rightChild]?leftChild:rightChild;
+		}else if(leftChild < length ){
+			 maxIndex=leftChild;
+		}else{
+			return;
+		}
+		
+		if(arr[currN]<arr[maxIndex]){
+			int tem=arr[currN];
+			arr[currN]=arr[maxIndex];
+			arr[maxIndex]=tem;
+			 heapify(arr, maxIndex, arr.length); 
+		}
+				
+		
+		return;
+	}
+}

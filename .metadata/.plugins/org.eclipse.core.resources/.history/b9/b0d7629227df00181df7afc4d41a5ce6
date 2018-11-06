@@ -1,0 +1,19 @@
+package gg.binaryTree;
+
+public class TreeNode {
+	public int data;
+	public TreeNode left;
+	public TreeNode right;
+	public TreeNode(int data){
+		this.data=data;
+	}
+	
+	public void printTreeNode(TreeNode head){
+		
+	}
+	
+	private void printNode(TreeNode  temp){
+		System.out.println(temp.data);
+	}
+	
+}

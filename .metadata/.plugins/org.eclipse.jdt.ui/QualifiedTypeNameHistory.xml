@@ -11,4 +11,8 @@
 <fullyQualifiedTypeName name="gg.single.Node"/>
 <fullyQualifiedTypeName name="gg.circular.circularLinkedListInsertion"/>
 <fullyQualifiedTypeName name="gg.single.LinkedListInsertion"/>
+<fullyQualifiedTypeName name="gg.doubly.Node"/>
+<fullyQualifiedTypeName name="gg.binaryTree.TreeNodeInsertion"/>
+<fullyQualifiedTypeName name="gg.binaryTree.TreeNode"/>
+<fullyQualifiedTypeName name="gg.doubly.doubleLinkedListInsertion"/>
 </qualifiedTypeNameHistroy>

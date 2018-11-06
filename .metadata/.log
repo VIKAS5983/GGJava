@@ -1491,3 +1491,40 @@ Caused by: java.lang.NoSuchMethodError: org.eclipse.ui.internal.EditorReference.
 	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
 	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
 	... 24 more
+!SESSION 2018-11-06 08:07:45.779 -----------------------------------------------
+eclipse.buildId=M20120914-1800
+java.version=1.7.0_09
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY com.perforce.team.core 2 0 2018-11-06 08:07:58.224
+!MESSAGE unable to get manifest version attribute: Not running from jar file: bundleresource://818.fwk130140814:1/com/perforce/p4java/Metadata.class
+
+!ENTRY com.perforce.team.core 2 0 2018-11-06 08:07:58.224
+!MESSAGE unable to get manifest date attribute: Not running from jar file: bundleresource://818.fwk130140814:1/com/perforce/p4java/Metadata.class
+
+!ENTRY com.perforce.team.core 1 0 2018-11-06 08:07:58.224
+!MESSAGE P4Java server factory loaded; version: Internal 2010.1 Perforce Development; date: unknown
+
+!ENTRY com.perforce.team.core 1 0 2018-11-06 08:07:58.224
+!MESSAGE Using default charset: windows-1252; JVM charset: windows-1252
+
+!ENTRY com.perforce.team.core 1 0 2018-11-06 08:07:58.224
+!MESSAGE Checking this Java for symbolic link support...
+
+!ENTRY com.perforce.team.core 1 0 2018-11-06 08:07:58.240
+!MESSAGE It seems this Java supports symbolic links.
+
+!ENTRY com.perforce.team.core 1 0 2018-11-06 08:07:58.240
+!MESSAGE Symbolic link support at the OS level will be determined at runtime...
+
+!ENTRY com.perforce.team.core 1 0 2018-11-06 08:07:58.240
+!MESSAGE initializing system file command helper class: java.io.File
+
+!ENTRY com.perforce.team.core 1 0 2018-11-06 08:07:58.240
+!MESSAGE Using default RPC system file command helper: com.perforce.p4java.impl.mapbased.rpc.sys.helper.RpcSystemFileCommandsHelper
+
+!ENTRY com.perforce.team.core 1 0 2018-11-06 08:07:58.240
+!MESSAGE setting RPC system file helper to class com.perforce.team.core.p4java.P4JavaSysFileCommandsHelper

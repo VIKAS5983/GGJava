@@ -1,0 +1,23 @@
+package gg.binaryTree;
+
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class TreeNodeBFS {
+
+	public static void main(){
+		TreeNode head=TreeNodeInsertion.insertNode(null,1);
+		head.left=new TreeNode(2);
+		head.right=new TreeNode(3);
+		head.left.left=new TreeNode(4);
+		head.left.right=new TreeNode(5);
+
+	}
+	
+	public static void iterativeBfs(TreeNode head){
+		
+		Queue<TreeNode> q=new LinkedList<>();
+		
+	}
+	
+}

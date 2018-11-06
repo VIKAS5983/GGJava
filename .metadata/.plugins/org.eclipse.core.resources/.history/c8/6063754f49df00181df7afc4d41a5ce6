@@ -1,0 +1,23 @@
+package gg.doubly;
+
+public class doubleLinkedListQuickSort {
+	public static void main(String args[]){
+		Node n=new Node(2);
+		
+		n=doubleLinkedListInsertion.insertHead(n,3);
+		n=insertHead(n,4);
+		n=insertHead(n,5);
+		n=insertHead(n,6);
+		n=insertHead(n,8);
+		n=insertTail(n,1);
+		n=insertTail(n,0);
+		n=insertTail(n,-1);
+		n=insertAtIndex(n, 11, 0);
+		n=insertAfterNode(n, 12, -1);
+		n=insertBeforeNode(n, 123, 123);
+
+		
+		printDoubleLinkedList(n);
+	}
+
+}
