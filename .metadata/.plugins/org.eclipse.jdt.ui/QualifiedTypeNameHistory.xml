@@ -6,13 +6,15 @@
 <fullyQualifiedTypeName name="gg.single.LinkedListLength.Node"/>
 <fullyQualifiedTypeName name="javax.swing.text.DefaultEditorKit.CutAction"/>
 <fullyQualifiedTypeName name="java.util.Hashtable"/>
-<fullyQualifiedTypeName name="java.util.LinkedList"/>
 <fullyQualifiedTypeName name="gg.single.linkedlistSwapAndReversal"/>
 <fullyQualifiedTypeName name="gg.single.Node"/>
 <fullyQualifiedTypeName name="gg.circular.circularLinkedListInsertion"/>
 <fullyQualifiedTypeName name="gg.single.LinkedListInsertion"/>
 <fullyQualifiedTypeName name="gg.doubly.Node"/>
+<fullyQualifiedTypeName name="gg.doubly.doubleLinkedListInsertion"/>
 <fullyQualifiedTypeName name="gg.binaryTree.TreeNodeInsertion"/>
 <fullyQualifiedTypeName name="gg.binaryTree.TreeNode"/>
-<fullyQualifiedTypeName name="gg.doubly.doubleLinkedListInsertion"/>
+<fullyQualifiedTypeName name="java.util.Queue"/>
+<fullyQualifiedTypeName name="java.util.LinkedList"/>
+<fullyQualifiedTypeName name="java.util.Stack"/>
 </qualifiedTypeNameHistroy>

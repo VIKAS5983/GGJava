@@ -1,5 +1,7 @@
 package gg.binaryTree;
 
+import java.util.Stack;
+
 public class TreeNodeTraversel {
 	
 	
@@ -31,6 +33,19 @@ public class TreeNodeTraversel {
 		
 		System.out.print(head.data+  "-> ");
 		inOrderTraversol(head.right);
+		
+	}
+	
+	public static void inOrderTraversalIterator(TreeNode head){
+		
+		Stack<TreeNode> st=new Stack<TreeNode>();
+		
+		st.push(head);
+		
+		while(!st.isEmpty()){
+			
+		}
+		
 		
 	}
 	public static void preOrderTraversol(TreeNode head){
