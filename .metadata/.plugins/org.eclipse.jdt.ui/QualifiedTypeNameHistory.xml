@@ -16,5 +16,8 @@
 <fullyQualifiedTypeName name="gg.binaryTree.TreeNode"/>
 <fullyQualifiedTypeName name="java.util.Queue"/>
 <fullyQualifiedTypeName name="java.util.LinkedList"/>
+<fullyQualifiedTypeName name="gg.binaryTree.TreeNodeTraversel"/>
 <fullyQualifiedTypeName name="java.util.Stack"/>
+<fullyQualifiedTypeName name="java.lang.Character"/>
+<fullyQualifiedTypeName name="gg.binaryTree.Node"/>
 </qualifiedTypeNameHistroy>

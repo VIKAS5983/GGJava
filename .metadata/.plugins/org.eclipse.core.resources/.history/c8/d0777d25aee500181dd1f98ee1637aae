@@ -1,0 +1,28 @@
+package gg.binaryTree;
+
+class Node{
+	public Node(char data){
+		this.data=data;
+	}
+	char data;
+	Node left;
+	Node right;
+}
+
+public class ExpressionTree {
+	
+    public static void main(String args[]) { 
+    	  
+        ExpressionTree et = new ExpressionTree(); 
+        String postfix = "ab+ef*g*-"; 
+        char[] charArray = postfix.toCharArray(); 
+        Node root = et.constructTree(charArray); 
+        System.out.println("infix expression is"); 
+        et.inorder(root); 
+    } 
+    
+    public constructTree(char[] charArray){
+    	
+    }
+
+}

@@ -22,6 +22,8 @@ public class TreeNodeTraversel {
 		System.out.println("\n Post orderTraversal ");
 		postOrderTraversol(head);
 		
+		System.out.println("Inorder Traversal WithoutRecrusion ");
+		inOrderTraversalIterator(head);
 		return;
 	}
 
@@ -40,13 +42,34 @@ public class TreeNodeTraversel {
 		
 		Stack<TreeNode> st=new Stack<TreeNode>();
 		
-		st.push(head);
-		
-		while(!st.isEmpty()){
-			
-		}
-		
-		
+
+	       TreeNode curr = head; 
+	       
+	        // traverse the tree 
+	        while (curr != null || st.size() > 0) 
+	        { 
+	  
+	            /* Reach the left most Node of the 
+	            curr Node */
+	            while (curr !=  null) 
+	            { 
+	                /* place pointer to a tree node on 
+	                   the stack before traversing 
+	                  the node's left subtree */
+	                st.push(curr); 
+	                curr = curr.left; 
+	            } 
+	  
+	            /* Current must be NULL at this point */
+	            curr = st.pop(); 
+	  
+	            System.out.print(curr.data + " "); 
+	  
+	            /* we have visited the node and its 
+	               left subtree.  Now, it's right 
+	               subtree's turn */
+	            curr = curr.right; 
+	        } 		
 	}
 	public static void preOrderTraversol(TreeNode head){
 		
