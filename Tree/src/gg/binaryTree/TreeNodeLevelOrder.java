@@ -1,5 +1,9 @@
 package gg.binaryTree;
 
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Stack;
+
 public class TreeNodeLevelOrder {
 
 	public static void main(String args[]){
@@ -11,8 +15,55 @@ public class TreeNodeLevelOrder {
 		System.out.print("Iterative: ");
 		iterativeLevelOrderTraversal(head);
 		System.out.print("\n Recursive:");
-		recursiveLevelOrderTraversal(head);
+		recursiveLevelOrderTraversal(head);System.out.println();
 		
+		System.out.print("ReverseLevelOrder ");
+		reverseLevelOrder(head);
+		
+		
+		
+		
+        TreeNode tree = new TreeNode(1); 
+        tree.left = new TreeNode(2); 
+        tree.right = new TreeNode(3); 
+   
+        tree.left.left = new TreeNode(4); 
+        tree.left.right = new TreeNode(5); 
+        tree.right.left = new TreeNode(6); 
+        tree.right.right = new TreeNode(7); 
+   
+        tree.left.left.left = new TreeNode(8); 
+        tree.left.left.right = new TreeNode(9); 
+        tree.left.right.left = new TreeNode(10); 
+        tree.left.right.right = new TreeNode(11); 
+        tree.right.left.left = new TreeNode(12); 
+        tree.right.left.right = new TreeNode(13); 
+        tree.right.right.left = new TreeNode(14); 
+        tree.right.right.right = new TreeNode(15); 
+   
+        tree.left.left.left.left = new TreeNode(16); 
+        tree.left.left.left.right = new TreeNode(17); 
+        tree.left.left.right.left = new TreeNode(18); 
+        tree.left.left.right.right = new TreeNode(19); 
+        tree.left.right.left.left = new TreeNode(20); 
+        tree.left.right.left.right = new TreeNode(21); 
+        tree.left.right.right.left = new TreeNode(22); 
+        tree.left.right.right.right = new TreeNode(23); 
+        tree.right.left.left.left = new TreeNode(24); 
+        tree.right.left.left.right = new TreeNode(25); 
+        tree.right.left.right.left = new TreeNode(26); 
+        tree.right.left.right.right = new TreeNode(27); 
+        tree.right.right.left.left = new TreeNode(28); 
+        tree.right.right.left.right = new TreeNode(29); 
+        tree.right.right.right.left = new TreeNode(30); 
+        tree.right.right.right.right = new TreeNode(31); 
+
+        recursiveLevelOrderTraversal(tree);
+        
+        reverseAlternateLevelsOfPerfectBinaryTree(tree);
+        System.out.println("reverseLevelOrder ");
+        TreeNodeLevelOrder.recursiveLevelOrderTraversal(tree);
+		//specificOrderLevelOrderTraversal(tree);
 	}
 	
 	public static void iterativeLevelOrderTraversal(TreeNode head){
@@ -58,5 +109,121 @@ public class TreeNodeLevelOrder {
 
 		recursiveUtilLevelOrderTraversal(head.right, level);
 
+	}
+	public static void reverseLevelOrder(TreeNode head){
+		Stack<TreeNode> st=reverseLevelOrderTraversalUtil(head);
+		
+		Stack<TreeNode> rst=new Stack<TreeNode>();
+		System.out.println("    -- "+st.size());
+		
+		while(!st.isEmpty()){
+			System.out.print( "asd");
+
+			TreeNode temp=st.pop();
+			if(temp==null){
+				while(!rst.isEmpty()){
+					System.out.print( "asd");
+				}
+				System.out.println();
+			}else{
+				rst.push(temp);
+				System.out.println(temp.data);
+			}
+				
+			}
+		}
+	
+	public static Stack reverseLevelOrderTraversalUtil(TreeNode head){
+		
+		Queue<TreeNode> q=new LinkedList<TreeNode>();
+		
+		TreeNode temp=head;
+		Stack<TreeNode> st=new Stack<TreeNode>();
+
+		q.add(head);
+
+		while(!q.isEmpty()){
+			temp=q.poll();
+			st.add(temp);
+			if(temp.left!=null)
+				q.add(temp.left);
+			if(temp.right!=null)
+				q.add(temp.right);
+
+		}
+		while(!st.isEmpty()){
+			System.out.print("->"+st.pop().data+" ");
+		}
+		
+		return st;
+	}
+	
+	public static void specificOrderLevelOrderTraversal(TreeNode head){
+		if(head==null){
+			return;
+		}
+		System.out.print("SpecificOrderTraversal : " );
+		System.out.print(head.data+" ");
+		Queue<TreeNode> q=new LinkedList<>(); 
+		
+		q.add(head.left);
+		q.add(head.right);
+		specificOrderLevelOrderTraversalUtil(q);
+		System.out.println();
+	}
+	
+	public static void specificOrderLevelOrderTraversalUtil(Queue<TreeNode> q){
+		if(q.isEmpty())
+			return ;
+		TreeNode left=q.poll();
+		TreeNode right=q.poll();
+		
+		System.out.print(" "+left.data+" "+right.data );
+
+		pushValidToQueue(left.left, q);
+		pushValidToQueue(right.right, q);
+		pushValidToQueue(left.right, q);
+		pushValidToQueue(right.left, q);
+		
+		specificOrderLevelOrderTraversalUtil(q);
+		
+	}
+	
+	public static void pushValidToQueue(TreeNode head,Queue<TreeNode> q){
+		if(head==null)
+			return;
+		q.add(head);
+	}
+
+	public static void reverseAlternateLevelsOfPerfectBinaryTree(TreeNode head){
+		if(head==null){
+			return;
+		}
+		System.out.print("SpecificOrderTraversal : " );
+		System.out.print(head.data+" ");
+		
+		reverseAlternateUtils(head.left,head.right,1);
+		System.out.println();
+	
+		
+	}
+	
+	public static void reverseAlternateUtils(TreeNode left,TreeNode right,int level){
+		
+		if(left==null ||right==null)
+			return;
+		
+		if(level%2==1){
+			swap(left,right);
+		}
+		reverseAlternateUtils(left.left,right.right, level+1);
+		reverseAlternateUtils(left.right,right.left, level+1);
+
+	}
+	
+	public static void swap(TreeNode left,TreeNode right){
+		int temp=left.data;
+		left.data=right.data;
+		right.data=temp;
 	}
 }
