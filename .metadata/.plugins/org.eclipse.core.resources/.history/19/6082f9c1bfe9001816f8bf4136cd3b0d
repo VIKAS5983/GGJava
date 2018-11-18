@@ -1,0 +1,65 @@
+package gg.construction;
+
+import java.util.Vector;
+
+import gg.binaryTree.TreeNode;
+
+public class TreeConstructionFromPreOrderAndInorder {
+
+	public static void main(String args[]){
+		int[] pre={1,2,4,7,5,8,9,3,6};
+		int[] in={7,4,2,8,5,9,1,3,6};
+		
+	}
+	
+	public static TreeNode TreeConverstionFromPreOrderAndInorder(Vector<Integer> pre,int[] in){
+		
+		Vector<Integer> left=new Vector<Integer>();
+		Vector<Integer> right=new Vector<Integer>();
+		
+		TreeNode head=new TreeNode(pre.get(0));
+		
+		int headIndex=-1;
+		
+		for(int i=0;i<in.length;i++)
+		{
+			if(in[i]==pre.get(0)){
+				headIndex=i;
+					break;
+			}
+		}
+		
+		
+		for(int i=0;i<headIndex;i++){
+			left.add(in[i]);
+		}
+		
+		for(int i=headIndex+1;i<pre.size();i++){
+			right.add(in[i]);
+		}
+		
+		
+		TreeConverstionUtil(head,left,right,pre);
+		
+		return null;
+	}
+	
+	public static TreeNode TreeConverstionUtil(TreeNode head,Vector<Integer> left, Vector<Integer> right,Vector<Integer> pre){
+		
+		if(searchVector(left,pre.get(0))){
+			
+		}
+		return null;
+	}
+	
+	public static boolean searchVector(Vector<Integer> v,int searchValue){
+		
+		for(int i=0;i<v.size();i++){
+			if(v.get(i)==searchValue)
+				return true;
+		}
+		return false;
+	}
+	
+	
+}

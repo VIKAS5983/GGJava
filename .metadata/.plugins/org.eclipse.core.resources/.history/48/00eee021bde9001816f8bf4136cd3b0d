@@ -1,0 +1,8 @@
+package gg.construction;
+
+public class TreeConstructionFromPreOrderAndInorder {
+
+	public static void main(String args[]){
+		int[] pre={};
+	}
+}

@@ -1,0 +1,7 @@
+package gg.rotation;
+
+public class maxSumAmongAllRotations {
+//Maximum sum of i*arr[i] among all rotations of a given array
+
+	
+}

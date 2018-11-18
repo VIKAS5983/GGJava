@@ -1,0 +1,78 @@
+package gg.construction;
+
+import java.util.Vector;
+
+import gg.binaryTree.TreeNode;
+import gg.binaryTree.TreeNodeTraversel;
+
+public class TreeConstructionFromPreOrderAndInorder {
+
+	public static void main(String args[]){
+		int[] pre={1,2,4,7,5,8,9,3,6};
+		int[] in={7,4,2,8,5,9,1,3,6};
+		Vector<Integer> preV=new Vector<Integer>();
+		for(int i=0;i<pre.length;i++)
+		preV.add(pre[i]);
+		
+		Vector<Integer> inV=new Vector<Integer>();
+		for(int i=0;i<in.length;i++)
+		inV.add(in[i]);
+
+		
+		TreeConverstionFromPreOrderAndInorder(preV,inV);
+	}
+	
+	public static TreeNode TreeConverstionFromPreOrderAndInorder(Vector<Integer> pre,Vector<Integer> inV){
+		
+		Vector<Integer> left=new Vector<Integer>();
+		Vector<Integer> right=new Vector<Integer>();
+		
+		TreeNode head=new TreeNode(pre.get(0));
+		
+		int headIndex=searchVector(inV, pre.get(0));
+		pre.remove(0);
+		left.addAll(inV.subList(0, headIndex-1));
+		right.addAll(inV.subList(headIndex+1, inV.size()-1));
+		
+		
+		TreeConverstionUtil(head,left,right,pre);
+		
+		TreeNodeTraversel.inOrderTraversol(head);
+		
+		return null;
+	}
+	
+    Node buildTree(char in[], char pre[], int inStrt, int inEnd) 
+    { 
+        if (inStrt > inEnd) 
+            return null; 
+  
+        /* Pick current node from Preorder traversal using preIndex 
+           and increment preIndex */
+        Node tNode = new Node(pre[preIndex++]); 
+  
+        /* If this node has no children then return */
+        if (inStrt == inEnd) 
+            return tNode; 
+  
+        /* Else find the index of this node in Inorder traversal */
+        int inIndex = search(in, inStrt, inEnd, tNode.data); 
+  
+        /* Using index in Inorder traversal, construct left and 
+           right subtress */
+        tNode.left = buildTree(in, pre, inStrt, inIndex - 1); 
+        tNode.right = buildTree(in, pre, inIndex + 1, inEnd); 
+  
+        return tNode; 
+    } 
+	public static int searchVector(Vector<Integer> v,int searchValue){
+		
+		for(int i=0;i<v.size();i++){
+			if(v.get(i)==searchValue)
+				return i;
+		}
+		return -1;
+	}
+	
+	
+}

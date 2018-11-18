@@ -1,0 +1,8 @@
+package gg.Utils;
+
+public class ArrayUtils {
+
+	public static void printArray(int[]){
+		
+	}
+}

@@ -1,5 +1,7 @@
 package gg.sort;
 
+import gg.Utils.ArrayUtils;
+
 public class HeapSort {
 	public static void main(String args[]){
 		

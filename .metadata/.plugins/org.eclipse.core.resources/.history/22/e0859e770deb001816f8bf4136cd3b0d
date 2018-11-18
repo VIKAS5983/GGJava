@@ -1,0 +1,12 @@
+package gg.rotation;
+
+public class findSumOfTwoElements {
+	
+		public static void main(String args[]){
+			
+			int[] arr={};
+			
+		}
+		
+		
+}
