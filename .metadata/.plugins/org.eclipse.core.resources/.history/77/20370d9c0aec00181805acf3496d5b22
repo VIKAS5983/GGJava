@@ -1,0 +1,31 @@
+package gg.rearrangement;
+
+import gg.Utils.ArrayUtils;
+import gg.rotation.rotateArray;
+
+public class RearrangementIndex {
+//Rearrange an array such that arr[i] = i
+	public static void main(String args[]){
+		int[] arr={1,2,3,4,5,6,7,8,8,9,10,11};
+		int[] arr2={8, 3, 1, 2};
+		
+		ArrayUtils.printArray(arr2);		
+	
+		ArrayUtils.printArray(arr2);
+	}
+
+	public static void ReArrange(int[] arr){
+		for(int i=0;i<arr.length;i++){
+			if(arr[i]==-1 || arr[i]==i){
+				continue;
+			}
+			int temp=arr[i];
+			
+			while(arr[temp]!=temp || temp!= -1){
+			arr[i]=-1;
+			int temp2=arr[temp];
+			arr[temp]=temp;
+			}
+		}
+	}
+}

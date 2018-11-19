@@ -1,0 +1,7 @@
+package gg.rearrangement;
+
+public class RearrangementIndex {
+//Rearrange an array such that arr[i] = i
+
+	
+}

@@ -13,7 +13,6 @@
 <fullyQualifiedTypeName name="gg.doubly.Node"/>
 <fullyQualifiedTypeName name="gg.doubly.doubleLinkedListInsertion"/>
 <fullyQualifiedTypeName name="gg.binaryTree.TreeNodeInsertion"/>
-<fullyQualifiedTypeName name="gg.binaryTree.TreeNode"/>
 <fullyQualifiedTypeName name="gg.binaryTree.Node"/>
 <fullyQualifiedTypeName name="java.lang.Integer"/>
 <fullyQualifiedTypeName name="org.omg.CORBA.OMGVMCID"/>
@@ -21,10 +20,16 @@
 <fullyQualifiedTypeName name="java.util.Queue"/>
 <fullyQualifiedTypeName name="java.util.Stack"/>
 <fullyQualifiedTypeName name="java.util.LinkedList"/>
-<fullyQualifiedTypeName name="gg.binaryTree.TreeNodeTraversel"/>
 <fullyQualifiedTypeName name="gg.binaryTree.TreeNodeLevelOrder"/>
 <fullyQualifiedTypeName name="java.util.Map"/>
 <fullyQualifiedTypeName name="java.util.HashMap"/>
 <fullyQualifiedTypeName name="java.util.Map.Entry"/>
 <fullyQualifiedTypeName name="java.util.Vector"/>
+<fullyQualifiedTypeName name="gg.construction.TreeConstructionFromPreOrderAndInorder"/>
+<fullyQualifiedTypeName name="gg.binaryTree.TreeNodeTraversel"/>
+<fullyQualifiedTypeName name="gg.binaryTree.TreeNode"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="gg.sort.ArrayUtils"/>
+<fullyQualifiedTypeName name="gg.rotation.rotateArray"/>
+<fullyQualifiedTypeName name="gg.Utils.ArrayUtils"/>
 </qualifiedTypeNameHistroy>

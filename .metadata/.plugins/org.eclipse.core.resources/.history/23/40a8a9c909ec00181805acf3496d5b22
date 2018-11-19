@@ -1,0 +1,24 @@
+package gg.rearrangement;
+
+import gg.Utils.ArrayUtils;
+import gg.rotation.rotateArray;
+
+public class RearrangementIndex {
+//Rearrange an array such that arr[i] = i
+	public static void main(String args[]){
+		int[] arr={1,2,3,4,5,6,7,8,8,9,10,11};
+		int[] arr2={8, 3, 1, 2};
+		
+		ArrayUtils.printArray(arr2);
+		
+		
+		System.out.println("Rotation Index is "+getRotationIndex(arr2));
+		
+		int k=getRotationIndex(arr2);
+		
+	
+		rotateArray.rotateArray(arr2, arr2.length-k);
+		ArrayUtils.printArray(arr2);
+
+	
+}
